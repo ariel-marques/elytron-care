@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elytron Care</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- HERO SECTION -->
+  <section class="text-center py-12 px-4 max-w-3xl mx-auto">
+    <h1 class="text-4xl font-bold mb-4">Discover the Power of Elytron Care</h1>
+    <p class="text-lg mb-6">A revolutionary supplement designed to support your health like never before.</p>
+
+    <!-- VSL VIDEO PLACEHOLDER -->
+    <div class="mb-6">
+      <iframe src="https://www.vturb.com/pt-BR/embed/YOUR_VIDEO_ID" frameborder="0" class="w-full h-64 md:h-96"></iframe>
+    </div>
+
+    <!-- TRIGGER SECTION -->
+    <div class="flex justify-center space-x-6 text-lg font-semibold">
+      <div>
+        <span id="timer" class="fake-counter text-red-600"></span>
+        <div class="text-sm">Offer expires in</div>
+      </div>
+      <div>
+        <span id="viewers" class="fake-counter"></span>
+        <div class="text-sm">
+            <p>People watching now</p></div>
+      </div>
+      <div>
+        <span id="stock" class="fake-counter text-green-600"></span>
+        <div class="text-sm">Bottles left</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLL-ACTIVATED OFFER (initially hidden) -->
+  <section id="offer" class="hidden text-center bg-yellow-100 py-10 px-4">
+    <h2 class="text-2xl font-bold mb-2">Special Launch Offer</h2>
+    <p class="mb-4">Act now and get an exclusive discount on Elytron Care!</p>
+    <button class="bg-green-600 text-white px-6 py-2 rounded-full text-lg shadow-lg hover:bg-green-700">Get Yours Now</button>
+  </section>
+
+  <script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
