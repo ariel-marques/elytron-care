@@ -1,51 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elytron Care</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elytron Care</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body class="bg-white text-gray-800 font-sans">
 
-  <!-- HERO SECTION -->
-  <section class="text-center py-12 px-4 max-w-3xl mx-auto">
-    <h1 class="text-4xl font-bold mb-4">Discover the Power of Elytron Care</h1>
-    <p class="text-lg mb-6">A revolutionary supplement designed to support your health like never before.</p>
+    <!-- SCROLL-ACTIVATED OFFER (initially hidden) -->
+    <section id="offer" class="hidden text-center bg-yellow-100 py-10 px-4">
+        <h2 class="text-2xl font-bold mb-2">Special Launch Offer</h2>
+        <p class="mb-4">Act now and get an exclusive discount on Elytron Care!</p>
+        <button class="bg-green-600 text-white px-6 py-2 rounded-full text-lg shadow-lg hover:bg-green-700">Get Yours Now</button>
+    </section>
+    
+    <!-- HERO SECTION -->
+    <section class="text-center py-12 px-4 max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4">Discover the Power of Elytron Care</h1>
+        <p class="text-lg mb-6">A revolutionary supplement designed to support your health like never before.</p>
 
-    <!-- VSL VIDEO PLACEHOLDER -->
+    <!-- VSL VIDEO (YouTube Embed otimizado) -->
     <div class="mb-6">
-      <iframe src="https://www.vturb.com/pt-BR/embed/YOUR_VIDEO_ID" frameborder="0" class="w-full h-64 md:h-96"></iframe>
+        <iframe
+        class="w-full h-64 md:h-96"
+        src="https://www.youtube.com/embed/1DSIia6bayU?rel=0&modestbranding=1&showinfo=0&controls=1"
+        title="Health Product Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+        </iframe>
     </div>
 
-    <!-- TRIGGER SECTION -->
-    <div class="flex justify-center space-x-6 text-lg font-semibold">
-      <div>
-        <span id="timer" class="fake-counter text-red-600"></span>
-        <div class="text-sm">Offer expires in</div>
-      </div>
-      <div>
-        <span id="viewers" class="fake-counter"></span>
-        <div class="text-sm">
-            <p>People watching now</p></div>
-      </div>
-      <div>
-        <span id="stock" class="fake-counter text-green-600"></span>
-        <div class="text-sm">Bottles left</div>
-      </div>
-    </div>
-  </section>
+        <!-- TRIGGER SECTION -->
+        <div class="flex justify-center space-x-6 mb-4 font-semibold">
+            <div>
+                <span id="timer" class="fake-counter text-4xl text-red-600"></span>
+                <div class="text-md">Offer expires in</div>
+            </div>
+            <div class="text-center">
+                <div class="flex justify-center items-center gap-2 mb-1">
+                    <span class="mt-2 online-dot online-dot"></span>
+                    <span id="viewers" class="fake-counter text-4xl"></span>
+                </div>
+                <div class="text-md">
+                    <p>People watching now</p>
+                </div>
+            </div>
+            <div>
+                <span id="stock" class="fake-counter text-4xl text-green-600"></span>
+                <div class="text-md">Bottles left</div>
+            </div>
+        </div>
 
-  <!-- SCROLL-ACTIVATED OFFER (initially hidden) -->
-  <section id="offer" class="hidden text-center bg-yellow-100 py-10 px-4">
-    <h2 class="text-2xl font-bold mb-2">Special Launch Offer</h2>
-    <p class="mb-4">Act now and get an exclusive discount on Elytron Care!</p>
-    <button class="bg-green-600 text-white px-6 py-2 rounded-full text-lg shadow-lg hover:bg-green-700">Get Yours Now</button>
-  </section>
+    </section>
 
-  <script src="assets/js/scripts.js"></script>
+    <section class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-8 text-center">What Our Customers Are Saying</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial Card -->
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <!-- SVG Avatar -->
+                            <div class="w-12 h-12" aria-hidden="true">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.773 144.773" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <circle fill="#f54747" cx="72.387" cy="72.386" r="72.386"></circle>
+                                    <!-- More SVG elements can go here -->
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Jane Doe</p>
+                            <p class="text-sm text-gray-500">Verified Buyer</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <!-- 5 Star Rating -->
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 text-sm">
+                        "Absolutely love this product! I was skeptical at first but after trying it, I’ve noticed a real difference. Highly recommend it to anyone considering."
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <!-- SVG Avatar -->
+                            <div class="w-12 h-12" aria-hidden="true">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.773 144.773" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <circle fill="#f54747" cx="72.387" cy="72.386" r="72.386"></circle>
+                                    <!-- More SVG elements can go here -->
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Jane Doe</p>
+                            <p class="text-sm text-gray-500">Verified Buyer</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <!-- 5 Star Rating -->
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 text-sm">
+                        "Absolutely love this product! I was skeptical at first but after trying it, I’ve noticed a real difference. Highly recommend it to anyone considering."
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <!-- SVG Avatar -->
+                            <div class="w-12 h-12" aria-hidden="true">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.773 144.773" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <circle fill="#f54747" cx="72.387" cy="72.386" r="72.386"></circle>
+                                    <!-- More SVG elements can go here -->
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Jane Doe</p>
+                            <p class="text-sm text-gray-500">Verified Buyer</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <!-- 5 Star Rating -->
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.39 2.463a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.175 0l-3.389 2.462c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.195 9.394c-.783-.57-.38-1.81.588-1.81h4.181a1 1 0 00.95-.69l1.286-3.967z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 text-sm">
+                        "Absolutely love this product! I was skeptical at first but after trying it, I’ve noticed a real difference. Highly recommend it to anyone considering."
+                    </p>
+                </div>
+                <!-- Duplicate above block with different names/testimonials as needed -->
+            </div>
+        </div>
+
+        <!-- BADGES -->
+        <div class="flex justify-center flex-wrap gap-4 mt-5 mb-6 bg-gray-100 py-4 px-6 rounded-xl">
+
+            <div class="w-20 h-20 flex items-center justify-center">
+                <img src="assets/img/selo1.svg" alt="Produto Verificado" class="w-full h-full object-contain" />
+            </div>
+            <div class="w-20 h-20 flex items-center justify-center">
+                <img src="assets/img/selo2.svg" alt="Aprovado por especialistas" class="w-full h-full object-contain" />
+            </div>
+
+            <div class="w-20 h-20 flex items-center justify-center">
+                <img src="assets/img/selo1.svg" alt="Produto Verificado" class="w-full h-full object-contain" />
+            </div>
+            <!-- Adicione mais selos conforme necessário -->
+        </div>
+
+    </section>
+
+
+    <script src="assets/js/scripts.js"></script>
 
 </body>
+
 </html>

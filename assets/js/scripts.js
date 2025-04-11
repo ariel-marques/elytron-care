@@ -32,4 +32,4 @@
     setTimeout(() => {
       document.getElementById('offer').classList.remove('hidden');
       document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
-    }, 3 * 60 * 1000); // 3 minutes as placeholder
+    }, 7 * 1 * 1000); // 3 minutes as placeholder

@@ -1,3 +1,46 @@
+    /* counter */
     .fake-counter {
       font-variant-numeric: tabular-nums;
+    }
+
+    /* badges section */
+    .badges-section {
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+      background-color: #f8f8f8; /* cor neutra para A/B testing */
+      display: flex;
+      justify-content: center;
+    }
+    
+    .badges-container {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 800px;
+    }
+    
+    .badge svg {
+      width: 64px;
+      height: 64px;
+      transition: transform 0.2s ease;
+    }
+    
+    .badge:hover svg {
+      transform: scale(1.05);
+    }
+    
+    /* dot blink */
+    .online-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #22c55e; /* Tailwind green-500 */
+      border-radius: 9999px;
+      animation: blink 1.2s linear infinite;
+    }
+  
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
     }
