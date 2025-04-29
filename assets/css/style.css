@@ -579,44 +579,58 @@
 /* Melhorias para o #bonus-popup */
 
 #bonus-popup > div {
-  max-width: 600px; /* máximo para desktop */
-  width: 90%;
-  max-height: 90vh; /* ⚡ LIMITA a altura total para no máximo 90% da tela */
-  overflow-y: auto; /* ⚡ Se ultrapassar, gera um scroll interno */
-  margin: 1rem;
+  max-width: 650px;
+  width: 95%;
+  padding: 1.5rem; /* padding menor */
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-/* Ajusta a imagem dentro do popup */
+#bonus-popup h2 {
+  font-size: 1.5rem; /* Reduz título */
+}
+
+#bonus-popup p {
+  padding-top: 15px;
+  font-size: 0.8rem; /* Reduz parágrafos */
+  line-height: 1.4;
+}
+
+#bonus-popup input, 
+#bonus-popup button {
+  font-size: 0.9rem; /* Reduz inputs e botão */
+  padding: 0.3rem 0.5rem;
+}
+
 #bonus-popup img {
-  max-width: 180px;
-  height: auto;
+  width: 120px; /* Reduz imagem */
 }
 
 @media (max-width: 768px) {
-  #bonus-popup > div {
-    max-width: 95%;
-    width: 95%;
-    padding: 1.5rem; /* padding menor */
-    max-height: 90vh;
-    overflow-y: auto;
-  }
+#bonus-popup > div {
+  max-width: 95%;
+  width: 95%;
+  padding: 1.5rem; /* padding menor */
+  max-height: 90vh;
+  overflow-y: auto;
+}
 
-  #bonus-popup h2 {
-    font-size: 1.3rem; /* Reduz título */
-  }
+#bonus-popup h2 {
+  font-size: 1.3rem; /* Reduz título */
+}
 
-  #bonus-popup p {
-    font-size: 0.8rem; /* Reduz parágrafos */
-    line-height: 1.4;
-  }
+#bonus-popup p {
+  font-size: 0.8rem; /* Reduz parágrafos */
+  line-height: 1.4;
+}
 
-  #bonus-popup input, 
-  #bonus-popup button {
-    font-size: 0.9rem; /* Reduz inputs e botão */
-    padding: 0.6rem 1rem;
-  }
+#bonus-popup input, 
+#bonus-popup button {
+  font-size: 0.9rem; /* Reduz inputs e botão */
+  padding: 0.6rem 1rem;
+}
 
-  #bonus-popup img {
-    width: 120px; /* Reduz imagem */
-  }
+#bonus-popup img {
+  width: 120px; /* Reduz imagem */
+}
 }
