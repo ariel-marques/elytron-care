@@ -19,20 +19,78 @@ setInterval(() => {
 }, 3000);
 viewersEl.textContent = viewers;
 
-// FAKE STOCK COUNTDOWN CONTROLADO
-let stock = 150;
+let stock = 1500;
+const minStock = 18;
 const stockEl = document.getElementById('stock');
-
-function updateStock() {
-  if (stock > 18 && Math.random() < 0.3) {
-    stock--;
-  }
-  stockEl.textContent = stock;
-}
-
-setInterval(updateStock, 4000);
-
 stockEl.textContent = stock;
+
+// FAKE COUNTDOWN STOCK
+document.addEventListener('DOMContentLoaded', () => {
+  const stockEl = document.getElementById('stock');
+  if (!stockEl) {
+    console.warn('Elemento #stock não encontrado!');
+    return;
+  }
+
+  let stock = 1500;
+  const minStock = 18;
+  stockEl.textContent = stock;
+
+  function updateVisualStock(value) {
+    stock = value;
+    stockEl.textContent = stock;
+  }
+
+  function burstDrop(amount, speed, callback) {
+    let target = stock - amount;
+    if (target < minStock) target = minStock;
+
+    const interval = setInterval(() => {
+      if (stock > target) {
+        updateVisualStock(stock - 1);
+      } else {
+        clearInterval(interval);
+        if (callback) callback();
+      }
+    }, speed);
+  }
+
+  function startControlledCountdown() {
+    setInterval(() => {
+      if (stock <= minStock) return;
+
+      const chance = Math.random();
+      let reduction = 0;
+
+      if (chance < 0.2) {
+        reduction = 1;
+      } else if (chance < 0.3) {
+        reduction = 3;
+      }
+
+      if (reduction && stock - reduction >= minStock) {
+        updateVisualStock(stock - reduction);
+      }
+    }, 4000);
+  }
+
+  function scheduleRandomBursts() {
+    setInterval(() => {
+      const chance = Math.random();
+      if (stock > minStock + 10 && chance < 0.5) {
+        burstDrop(10, 100);
+      }
+    }, 35000); // A cada 35 segundos tenta dar um burst
+  }
+
+  // Início da contagem
+  burstDrop(11, 100, () => {
+    startControlledCountdown();
+    scheduleRandomBursts();
+  });
+});
+
+
 
 // TRIGGER OFFER AFTER A SET TIMEOUT (E.G., SIMULATE VIDEO TIME)
 setTimeout(() => {
@@ -97,3 +155,4 @@ document.addEventListener('DOMContentLoaded', function() {
 // player.on('complete', () => {
 //    showBonusPopup();
 // });
+
