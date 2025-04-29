@@ -592,18 +592,31 @@
   height: auto;
 }
 
-/* Responsivo para telas pequenas */
 @media (max-width: 768px) {
-  #bonus-popup .flex-col.md\\:flex-row {
-    flex-direction: column; /* Imagem em cima, formulário embaixo */
-    text-align: center;
+  #bonus-popup > div {
+    max-width: 95%;
+    width: 95%;
+    padding: 1.5rem; /* padding menor */
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  #bonus-popup h2 {
+    font-size: 1.3rem; /* Reduz título */
+  }
+
+  #bonus-popup p {
+    font-size: 0.8rem; /* Reduz parágrafos */
+    line-height: 1.4;
+  }
+
+  #bonus-popup input, 
+  #bonus-popup button {
+    font-size: 0.9rem; /* Reduz inputs e botão */
+    padding: 0.6rem 1rem;
   }
 
   #bonus-popup img {
-    margin: 0 auto;
-  }
-
-  #bonus-popup .flex-1 {
-    width: 100%;
+    width: 120px; /* Reduz imagem */
   }
 }
