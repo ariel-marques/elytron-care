@@ -579,8 +579,10 @@
 /* Melhorias para o #bonus-popup */
 
 #bonus-popup > div {
-  max-width: 900px; /* Limita a largura máxima para desktop */
-  width: 90%; /* Mantém responsivo */
+  max-width: 600px; /* máximo para desktop */
+  width: 90%;
+  max-height: 90vh; /* ⚡ LIMITA a altura total para no máximo 90% da tela */
+  overflow-y: auto; /* ⚡ Se ultrapassar, gera um scroll interno */
   margin: 1rem;
 }
 
