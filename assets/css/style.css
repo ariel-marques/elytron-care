@@ -576,61 +576,61 @@
   animation: fadeIn 0.4s ease-out;
 }
 
-/* Melhorias para o #bonus-popup */
+/* #bonus-popup */
 
 #bonus-popup > div {
   max-width: 650px;
   width: 95%;
-  padding: 1.5rem; /* padding menor */
+  padding: 1.5rem;
   max-height: 90vh;
   overflow-y: auto;
 }
 
 #bonus-popup h2 {
-  font-size: 1.5rem; /* Reduz título */
+  font-size: 1.5rem;
 }
 
 #bonus-popup p {
   padding-top: 15px;
-  font-size: 0.8rem; /* Reduz parágrafos */
+  font-size: 0.8rem;
   line-height: 1.4;
 }
 
 #bonus-popup input, 
 #bonus-popup button {
-  font-size: 0.9rem; /* Reduz inputs e botão */
+  font-size: 0.9rem;
   padding: 0.3rem 0.5rem;
 }
 
 #bonus-popup img {
-  width: 120px; /* Reduz imagem */
+  width: 120px;
 }
 
 @media (max-width: 768px) {
 #bonus-popup > div {
   max-width: 95%;
   width: 95%;
-  padding: 1.5rem; /* padding menor */
+  padding: 1.5rem;
   max-height: 90vh;
   overflow-y: auto;
 }
 
 #bonus-popup h2 {
-  font-size: 1.3rem; /* Reduz título */
+  font-size: 1.3rem;
 }
 
 #bonus-popup p {
-  font-size: 0.8rem; /* Reduz parágrafos */
+  font-size: 0.8rem;
   line-height: 1.4;
 }
 
 #bonus-popup input, 
 #bonus-popup button {
-  font-size: 0.9rem; /* Reduz inputs e botão */
+  font-size: 0.9rem;
   padding: 0.6rem 1rem;
 }
 
 #bonus-popup img {
-  width: 120px; /* Reduz imagem */
+  width: 120px;
 }
 }

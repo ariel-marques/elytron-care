@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (stock > minStock + 10 && chance < 0.5) {
         burstDrop(10, 100);
       }
-    }, 35000); // A cada 35 segundos tenta dar um burst
+    }, 35000); 
   }
 
   // Início da contagem
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => {
   document.getElementById('offer').classList.remove('hidden');
   document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
-}, 7 * 1 * 1000); // 3 minutes as placeholder
+}, 7 * 1 * 1000);
 
 // EXIT INTENT POPUP
 let exitPopupShown = false;
@@ -143,15 +143,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // --- SIMULAÇÃO PARA TESTAR AGORA ---
-// Depois substituímos isso pela trigger real do VTurb
+// Substituir pelo trigger real do VTurb
 document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(showBonusPopup, 2000); // apenas para teste: aparece 2 segundos depois de abrir a página
+  setTimeout(showBonusPopup, 2000); 
 });
 
-// --- INTEGRAÇÃO REAL COM VTURB ---
+// --- INTEGRAÇÃO REAL VTURB ---
 // (para depois quando o vídeo for assistido até o final)
 
-// Exemplo que vamos usar com a API do VTurb:
+// Exemplo para usar com API do VTurb:
 // player.on('complete', () => {
 //    showBonusPopup();
 // });
