@@ -584,6 +584,7 @@
   padding: 1.5rem;
   max-height: 90vh;
   overflow-y: auto;
+  border: #9f9f9f solid 1px;
 }
 
 #bonus-popup h2 {
@@ -613,6 +614,7 @@
   padding: 1.5rem;
   max-height: 90vh;
   overflow-y: auto;
+  border: #9f9f9f solid 1px;
 }
 
 #bonus-popup h2 {
