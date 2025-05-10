@@ -2,7 +2,33 @@
     .fake-counter {
       font-variant-numeric: tabular-nums;
     }
+    .timer-box {
+      background-color: rgba(0, 0, 0, 0.2); /* ou #b91c1c para mais contraste */
+      color: white;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 4px 12px;
+      border-radius: 4px;
+      min-width: 48px;
+      text-align: center;
+      display: inline-block;
+    }
 
+    .timer-label {
+      color: white;
+      font-size: 0.75rem;
+      text-align: center;
+      display: block;
+      margin-top: 2px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .timer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     /* badges section */
     .badges-section {
       padding: 1.5rem 1rem;

@@ -98,6 +98,51 @@ setTimeout(() => {
   document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
 }, 7 * 1 * 1000);
 
+// HEADLINES ROTATIVAS DO TIMER
+const offerPhrases = [
+  "Hurry! This Special Offer Expires In:",
+  "Warning: This page may be taken down in:",
+  "Big Pharma doesn’t want you to see this... Offer closes in:",
+  "Final Chance to Access This Discovery Before It’s Gone:"
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const headline = document.getElementById('offer-headline');
+  if (headline) {
+    const random = Math.floor(Math.random() * offerPhrases.length);
+    headline.textContent = offerPhrases[random];
+  }
+
+  // TIMER DE 1h49min
+  const deadline = new Date(Date.now() + 1 * 60 * 60 * 1000 + 49 * 60 * 1000); // 1h49min
+  const hoursEl = document.getElementById('hours');
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+
+  function updateTimer() {
+    const now = new Date();
+    const remaining = deadline - now;
+
+    if (remaining <= 0) {
+      hoursEl.textContent = "00";
+      minutesEl.textContent = "00";
+      secondsEl.textContent = "00";
+      return;
+    }
+
+    const hours = Math.floor(remaining / (1000 * 60 * 60));
+    const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minutesEl.textContent = String(minutes).padStart(2, '0');
+    secondsEl.textContent = String(seconds).padStart(2, '0');
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+});
+
 // EXIT INTENT POPUP
 let exitPopupShown = false;
 
